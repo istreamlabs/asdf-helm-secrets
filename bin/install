@@ -20,7 +20,7 @@ install() {
   # Uninstall helm3 plugin
   helm plugin uninstall secrets > /dev/null
 
-  helm plugin install https://github.com/zendesk/helm-secrets --version v"${ASDF_INSTALL_VERSION}"
+  helm plugin install https://github.com/jkroepke/helm-secrets --version v"${ASDF_INSTALL_VERSION}"
 }
 
 install $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
