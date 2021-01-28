@@ -15,12 +15,12 @@ install() {
   # we'll uninstall and re-install. There's no way to overwrite in place
 
   # Uninstall helm2 plugin
-  helm plugin remove secrets 2>&1 > /dev/null
+  helm plugin remove secrets &> /dev/null
 
   # Uninstall helm3 plugin
-  helm plugin uninstall secrets 2>&1 > /dev/null
+  helm plugin uninstall secrets &> /dev/null
 
-  helm plugin install https://github.com/jkroepke/helm-secrets --version v"${ASDF_INSTALL_VERSION:-latest}"
+  helm plugin install https://github.com/jkroepke/helm-secrets --version v"${ASDF_INSTALL_VERSION}"
 }
 
 install $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH
